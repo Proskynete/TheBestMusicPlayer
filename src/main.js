@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/';
-import Search from './components/Search/';
+import App from './views/';
 
 const Main = () =>
   (
@@ -9,9 +10,11 @@ const Main = () =>
       <div className="col-xs-12">
         <Header />
       </div>
-      <div className="row">
-        <Search />
-      </div>
+      <BrowserRouter>
+        <div className="row">
+          <App />
+        </div>
+      </BrowserRouter>
     </div>
   );
 
