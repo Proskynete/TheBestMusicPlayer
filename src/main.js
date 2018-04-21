@@ -11,9 +11,7 @@ const Main = () =>
         <Header />
       </div>
       <BrowserRouter>
-        <div className="row">
-          <App />
-        </div>
+        <App />
       </BrowserRouter>
     </div>
   );
