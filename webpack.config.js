@@ -17,6 +17,15 @@ const config = {
   module: {
     loaders: [
       {
+        test: /\.(sass|scss)$/,
+        exclude: /node_modules/,
+        loaders: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader', options: { sourceMap: true, sourceMapContents: true } },
+          { loader: 'sass-loader', options: { sourceMap: true, sourceMapContents: true } },
+        ],
+      },
+      {
         test: /\.js$/,
         include: path.resolve(__dirname, './src/'),
         exclude: /node_modules/,

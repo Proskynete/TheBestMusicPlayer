@@ -9620,7 +9620,7 @@ var Main = function (_Component) {
   _createClass(Main, [{
     key: 'render',
     value: function render() {
-      return React.createElement(
+      return _react2.default.createElement(
         'h1',
         null,
         'The Best Music Player'
@@ -9633,7 +9633,7 @@ var Main = function (_Component) {
 
 ;
 
-_reactDom2.default.render(React.createElement(Main, null), document.getElementById('app'));
+_reactDom2.default.render(_react2.default.createElement(Main, null), document.getElementById('app'));
 
 /***/ }),
 /* 82 */
