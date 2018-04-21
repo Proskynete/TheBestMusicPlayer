@@ -5,12 +5,19 @@
   "repository": "git@github.com:Proskynete/TheBestReproductor.git",
   "author": "Eduardo Alvarez <eduardo.alvarez@globant.com>",
   "license": "MIT",
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "build": "webpack",
+    "start": "concurrently 'yarn build' 'yarn serve'"
+  },
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "webpack": "^4.6.0"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
+    "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3"
   }
 }
