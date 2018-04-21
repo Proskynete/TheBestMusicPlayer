@@ -1,6 +1,5 @@
 import React from 'react';
 import config from '../../config/config';
-
 import './index.scss';
 
 const Header = () =>

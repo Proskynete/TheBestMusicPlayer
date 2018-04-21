@@ -1,5 +1,9 @@
+@import '../../assets/scss/colors';
+
 header {
   text-align: center;
+  border-bottom: 1px solid $gray-color-whitout-opacity;
+  padding: 10px;
 
   > h1 {
     padding: 0 20px;
