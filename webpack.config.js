@@ -1,19 +1,34 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const OUTPUT = path.resolve(__dirname, './public/');
-const ENTRY = path.resolve(__dirname, './src/', 'main.js');
-
-module.exports = {
-  mode: 'development',
-  entry: ENTRY,
+const config = {
+  entry: path.resolve(__dirname, 'src', 'main.js'),
   output: {
-    path: OUTPUT,
+    path: path.resolve(__dirname, './public/'),
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: OUTPUT,
+    contentBase: './public/',
     port: 8080,
     compress: true,
     inline: true,
   },
-}
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, './src/'),
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          cacheDirectory: true,
+          presets: ['react', 'es2015'],
+        },
+      },
+    ],
+  },
+  plugins: [new webpack.ProgressPlugin(), new HtmlWebpackPlugin({ template: './src/index.html' })],
+};
+
+module.exports = config;

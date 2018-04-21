@@ -1,5 +1,5 @@
 {
-  "name": "MyBestReproductor",
+  "name": "MyBestMusicPlayer",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:Proskynete/TheBestReproductor.git",
@@ -10,14 +10,20 @@
     "build": "webpack",
     "start": "concurrently 'yarn build' 'yarn serve'"
   },
-  "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "webpack": "^4.6.0"
-  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.1",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.1.3"
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^3.0.6",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "3"
   }
 }
