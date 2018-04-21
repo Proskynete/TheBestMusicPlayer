@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/Header/';
 
-const Main = () => (<h1>The Best Music Player</h1>);
+const Main = () =>
+  (
+    <div className="row">
+      <div className="col-xs-12">
+        <Header />
+      </div>
+    </div>
+  );
 
 ReactDOM.render(<Main />, document.getElementById('app'));

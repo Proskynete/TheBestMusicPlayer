@@ -17,7 +17,7 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.(sass|scss)$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         loaders: [
           { loader: 'style-loader' },
