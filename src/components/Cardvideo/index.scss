@@ -1,0 +1,41 @@
+@import '../../assets/scss/colors';
+
+.thumbnails {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.content {
+  p {
+    margin-bottom: 0;
+  }
+
+  .published {
+    font-size: 10px;
+  }
+}
+
+.title {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.fa {
+  font-size: 20px;
+}
+
+hr {
+  background-position: 50%;
+  border: 0;
+  border-image: linear-gradient(
+    90deg,
+    $gray-color-with-opacity,
+    $gray-color-whitout-opacity 50%,
+    $gray-color-with-opacity 100%) 0 0 100%;
+  border-style: solid;
+  border-width: 0 0 1px;
+  box-sizing: border-box;
+  color: $gray-color-whitout-opacity;
+  margin: 1.35em auto;
+  max-width: 100%;
+}
