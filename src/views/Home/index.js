@@ -8,7 +8,7 @@ const Home = () => {
       <div className="search"><Search /></div>
       <div className="result">
         <div className="col-xs-12">
-          <h3>Im a result</h3>
+          <p className="title-result">Últimos resultados</p>
         </div>
       </div>
     </div>
