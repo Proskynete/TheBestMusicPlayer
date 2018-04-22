@@ -15,6 +15,19 @@ class Home extends Component {
     this.handleGetVideos = this.handleGetVideos.bind(this);
   }
 
+  componentWillMount() {
+    if (localStorage.getItem('listOfLastVideos')) {
+      this.setState({
+        listOfVideos: [...this.state.listOfVideos, JSON.parse(localStorage.getItem('listOfLastVideos'))],
+      });
+    }
+  }
+
+  componentWillUpdate(nextProp, nextState) {
+    const cache = JSON.stringify(nextState.listOfVideos[0]);
+    localStorage.setItem('listOfLastVideos', cache);
+  }
+
   handleGetParametersSearch(event) {
     if (event.key === 'Enter') {
       this.setState({
