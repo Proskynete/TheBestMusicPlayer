@@ -18,13 +18,13 @@ class Home extends Component {
   componentWillMount() {
     if (localStorage.getItem('listOfLastVideos')) {
       this.setState({
-        listOfVideos: [...this.state.listOfVideos, JSON.parse(localStorage.getItem('listOfLastVideos'))],
+        listOfVideos: JSON.parse(localStorage.getItem('listOfLastVideos')),
       });
     }
   }
 
   componentWillUpdate(nextProp, nextState) {
-    const cache = JSON.stringify(nextState.listOfVideos[0]);
+    const cache = JSON.stringify(nextState.listOfVideos);
     localStorage.setItem('listOfLastVideos', cache);
   }
 
@@ -76,7 +76,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="title col-xs-12" />
         <div className="result">
           {(this.state.loader) ? loader : this.handleShowVideos() }
         </div>
